@@ -1,9 +1,11 @@
 # loadmat_h5
 Function to load MATLAB .mat files stored as v7.3 or greater (i.e. in hdf5 format):
 
-Copy/paste from `loadmat_h5.py` (or import via `from loadmat_h5 import loadmat_h5`) and use as:
+Use as:
 
 `data = loadmat_h5('my_data_file.mat')`
+
+You can copy and paste the loadmat_h5 function from `loadmat_h5.py`, or import it with `from loadmat_h5 import loadmat_h5`
 
 (note: this requires the library h5py, which you can install via `conda install h5py` if using Anaconda or via `pip install h5py` if not using Anaconda)
 
