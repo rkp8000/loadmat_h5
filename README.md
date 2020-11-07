@@ -5,6 +5,8 @@ Copy/paste from `loadmat_h5.py` (or import via `from loadmat_h5 import loadmat_h
 
 `data = loadmat_h5('my_data_file.mat')`
 
+(note: this requires the library h5py, which you can install via `conda install h5py` if using Anaconda or via `pip install h5py` if not using Anaconda)
+
 See example usage in [loadmat_h5.ipynb](https://github.com/rkp8000/loadmat_h5/blob/master/loadmat_h5.ipynb).
 
 This is a function equivalent to scipy's `loadmat` for when you get the following error using the latter:
