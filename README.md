@@ -7,7 +7,7 @@ Use as:
 
 You can copy and paste the loadmat_h5 function from `loadmat_h5.py`, or import it with `from loadmat_h5 import loadmat_h5`
 
-(note: this requires the library h5py, which you can install via `conda install h5py` if using Anaconda or via `pip install h5py` if not using Anaconda, as well as numpy)
+(note: this requires the library h5py, which is included in Anaconda or via `pip install h5py` if not using Anaconda; it also requires numpy)
 
 See example usage in [loadmat_h5.ipynb](https://github.com/rkp8000/loadmat_h5/blob/master/loadmat_h5.ipynb).
 
