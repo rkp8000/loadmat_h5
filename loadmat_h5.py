@@ -22,6 +22,8 @@ def loadmat_h5(file_name):
 
             if isinstance(v, Group):  # struct
                 d[k] = deref_s(v, f, verbose=verbose)
+            elif isinstance(v, Dataset) and v.size == 0:  # empty dataset
+                d[k] = np.zeros(v.shape)
             elif isinstance(v, Dataset) and isinstance(np.array(v).flat[0], Reference):  # cell
                 d[k] = deref_c(v, f, verbose=verbose)
             elif isinstance(v, Dataset) and v.dtype == 'uint16':
@@ -49,6 +51,8 @@ def loadmat_h5(file_name):
 
             if isinstance(v, Group):  # struct
                 a[i] = deref_s(v, f, verbose=verbose)
+            elif isinstance(v, Dataset) and v.size == 0:  # empty dataset
+                d[k] = np.zeros(v.shape)
             elif isinstance(v, Dataset) and isinstance(np.array(v).flat[0], Reference):  # cell
                 a[i] = deref_c(v, f, verbose=verbose)
             elif isinstance(v, Dataset) and v.dtype == 'uint16':
